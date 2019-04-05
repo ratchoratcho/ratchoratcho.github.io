@@ -35,8 +35,8 @@
         <div class="col-12">HAT基盤: ボタンコマンドバリエーション</div>
     </div>
     <div class="row">
-        <div class="col-4" id="column1"><img src="noImage.png"></div>
-        <div class="col-8" id="column2">
+        <div class="col-4"><img src="noImage.png"></div>
+        <div class="col-8">
             インターン先のIoT企業で初めて一から作ったもの。<br>
             ラズパイ用の、ボタン実装済みHAT基盤から様々なパターンのボタンコマンドを受け付けることが要件。<br>
             クリック、ダブルクリックなどの任意のn回クリックと、ある時間k以上ホールドという二種類の入力を任意に組み合わせたコマンドを受け付けることができる。<br>
@@ -47,18 +47,46 @@
 
 <div class="container mx-auto my-content">
     <div class="row">
-        <div class="col-12">HAT基盤: ボタンコマンドバリエーション</div>
+        <div class="col-12">顔画像からの感情検出</div>
     </div>
     <div class="row">
-        <div class="col-4" id="column1"><img src="noImage.png"></div>
-        <div class="col-8" id="column2">
-            インターン先のIoT企業で初めて一から作ったもの。<br>
-            ラズパイ用の、ボタン実装済みHAT基盤から様々なパターンのボタンコマンドを受け付けることが要件。<br>
-            クリック、ダブルクリックなどの任意のn回クリックと、ある時間k以上ホールドという二種類の入力を任意に組み合わせたコマンドを受け付けることができる。<br>
+        <div class="col-4"><img src="EmotionDetection.png"></div>
+        <div class="col-8">
+            卒業研究のために必要となるサンプルアプリケーションの一つとして開発。<br>
+            入力画像 -> OpenCVによる顔の部分の抽出 -> LBP特徴量 -> Random Forest分類機<br>
+            と言うような処理の流れで分類。<br>
             コードは非公開。
         </div>
     </div>
 </div>
+
+<div class="container mx-auto my-content">
+    <div class="row">
+        <div class="col-12"><a href="ARLikeBurgerKing.html">Sample: AR Advertising like BURGER KING</a></div>
+    </div>
+    <div class="row">
+        <div class="col-4"><img src="ARLikeBurgerKing.jpg"></div>
+        <div class="col-8">
+            以前、ARを利用した広告として某ハンバーガーショップの広告が注目された。<br>
+            このAR広告を非常に面白いと感じたため、簡単に実装した。<br>
+            コードは非公開。
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto my-content">
+    <div class="row">
+        <div class="col-12"><a href="MonoMemo.html">MonoMemo</a></div>
+    </div>
+    <div class="row">
+        <div class="col-4"><img src="MonoMemo.PNG"></div>
+        <div class="col-8">
+            `MonoMemo`と言う自分で考えたアプリケーション。実世界のモノに紐づいてメモを残せるような仕組みにできたら面白いと思っている。今はまだ、実装途中。<br>
+            分類機モデルはAppleが提供しているものをそのまま使っているので、改良していけば個々のモノ特定する精度が向上すると思われる。具体的には、ARAnchorで得られる特徴点の情報や深度カメラによる情報などが使えると考えられる。
+        </div>
+    </div>
+</div>
+
 
 <!--フッター-->
 <footer class="footer d-flex align-items-center">
