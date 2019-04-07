@@ -33,6 +33,9 @@ body > .container {
     margin: 30px;
     text-align: center;
     font-size: 50px;
+    font-family: "Impact";
+    color: darkgreen;
+    letter-spacing: 5px;
 }
 
 .my-content {
@@ -41,18 +44,18 @@ body > .container {
 }
 
 .col-12 {
-    border-top: lavender 1px solid;
-    border-left: lavender 1px solid;
-    border-right: lavender 1px solid;
+    /*border-top: lavender 1px solid;*/
+    /*border-left: lavender 1px solid;*/
+    /*border-right: lavender 1px solid;*/
     font-size: 20px;
     color: darkgreen;
     text-align: center;
 }
 .col-8 {
-    border: 1px solid lavender;
+    /*border: 1px solid lavender;*/
 }
 .col-4 {
-    border: 1px solid lavender;
+    /*border: 1px solid lavender;*/
 }
 img {
     max-width: 70%;

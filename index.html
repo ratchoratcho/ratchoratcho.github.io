@@ -13,81 +13,57 @@
         <a class="navbar-brand" href="#">Portfolio</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">
-                        "Home "
-                        <span class="c">(current)</span>
-                    </a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <div class="dropdown">
+                        <button type="button" id="dropdown1"
+                                class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                            Work
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdown1">
+                            <a class="dropdown-item" href="#HAT">HAT基盤: ボタンコマンドバリエーション</a>
+                            <a class="dropdown-item" href="#OCRtoImage">OCR to Image</a>
+                            <a class="dropdown-item" href="#Breakout">Breakout on AR</a>
+                            <a class="dropdown-item" href="#ARAd">Sample: AR Advertising like BURGER KING</a>
+                            <a class="dropdown-item" href="#MonoMemo">MonoMemo</a>
+                            <a class="dropdown-item" href="#EmotionDetection">顔画像からの感情検出</a>
+                            <a class="dropdown-item" href="#usdz">usdz sample</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
     </nav>
 </div>
 <div class="taaewafa">
-    <div class="faewfawa">Ratcho's Portfolio</div>
+    <div class="faewfawa"><i>Ratcho's Portfolio</i></div>
+    <div class="container">
+        東京大学大学院工学系研究科電気系工学専攻M1。<br>
+        とあるIoTベンチャーでハードウェアを制御するソフトウェアを書いている。<br>
+        ARに興味があり、ARのアプリケーションをサンプルとして作ることで、ARの可能性を探っている。<br>
+        Node.js, JavaScript, C++, Swift, Python, Unity, ARKit
+    </div>
 </div>
 
-<div class="container mx-auto my-content">
+<div class="container mx-auto my-content" id="HAT">
     <div class="row">
         <div class="col-12">HAT基盤: ボタンコマンドバリエーション</div>
     </div>
     <div class="row">
         <div class="col-4"><img src="noImage.png"></div>
         <div class="col-8">
-            インターン先のIoT企業で初めて一から作ったもの。<br>
+            インターン先のIoT企業で作ったもの。<br>
             ラズパイ用の、ボタン実装済みHAT基盤から様々なパターンのボタンコマンドを受け付けることが要件。<br>
             クリック、ダブルクリックなどの任意のn回クリックと、ある時間k以上ホールドという二種類の入力を任意に組み合わせたコマンドを受け付けることができる。<br>
-            コードは非公開。
+            ハードウェア特有のチャタリングのような問題に対応する部分を工夫して対応しなくてはいけなかった。<br>
+            様々な入力を組み合わせる部分で、UXを損ねないような、ボタン入力間隔時間を見つけることにも時間がかかった。
         </div>
     </div>
 </div>
 
-<div class="container mx-auto my-content">
-    <div class="row">
-        <div class="col-12">顔画像からの感情検出</div>
-    </div>
-    <div class="row">
-        <div class="col-4"><img src="EmotionDetection.png"></div>
-        <div class="col-8">
-            卒業研究のために必要となるサンプルアプリケーションの一つとして開発。<br>
-            入力画像 -> OpenCVによる顔の部分の抽出 -> LBP特徴量 -> Random Forest分類機<br>
-            と言うような処理の流れで分類。<br>
-            コードは非公開。
-        </div>
-    </div>
-</div>
-
-<div class="container mx-auto my-content">
-    <div class="row">
-        <div class="col-12"><a href="ARLikeBurgerKing.html">Sample: AR Advertising like BURGER KING</a></div>
-    </div>
-    <div class="row">
-        <div class="col-4"><img src="ARLikeBurgerKing.jpg"></div>
-        <div class="col-8">
-            以前、ARを利用した広告として某ハンバーガーショップの広告が注目された。<br>
-            このAR広告を非常に面白いと感じたため、簡単に実装した。<br>
-            コードは非公開。
-        </div>
-    </div>
-</div>
-
-<div class="container mx-auto my-content">
-    <div class="row">
-        <div class="col-12"><a href="MonoMemo.html">MonoMemo</a></div>
-    </div>
-    <div class="row">
-        <div class="col-4"><img src="MonoMemo.PNG"></div>
-        <div class="col-8">
-            `MonoMemo`と言う自分で考えたアプリケーション。実世界のモノに紐づいてメモを残せるような仕組みにできたら面白いと思っている。今はまだ、実装途中。<br>
-            分類機モデルはAppleが提供しているものをそのまま使っているので、改良していけば個々のモノ特定する精度が向上すると思われる。具体的には、ARAnchorで得られる特徴点の情報や深度カメラによる情報などが使えると考えられる。
-        </div>
-    </div>
-</div>
-
-<div class="container mx-auto my-content">
+<div class="container mx-auto my-content" id="OCRtoImage">
     <div class="row">
         <div class="col-12"><a href="OcrToImage.html">OCR to Image</a></div>
     </div>
@@ -103,7 +79,7 @@
     </div>
 </div>
 
-<div class="container mx-auto my-content">
+<div class="container mx-auto my-content" id="Breakout">
     <div class="row">
         <div class="col-12"><a href="Breakout.html">Breakout on AR</a></div>
     </div>
@@ -120,7 +96,51 @@
     </div>
 </div>
 
-<div class="container mx-auto my-content">
+<div class="container mx-auto my-content" id="ARAd">
+    <div class="row">
+        <div class="col-12"><a href="ARLikeBurgerKing.html">Sample: AR Advertising like BURGER KING</a></div>
+    </div>
+    <div class="row">
+        <div class="col-4"><img src="ARLikeBurgerKing.jpg"></div>
+        <div class="col-8">
+            以前、ARを利用した広告として某ハンバーガーショップの広告が注目された。<br>
+            このAR広告を非常に面白いと感じたため、簡単に実装した。<br>
+            やっていることは非常にシンプルである。<br>
+            まず、ARKitの標準機能で指定した画像を認識するように設定する。そして、カメラでその画像を見ると同時に、その画像の位置にオブジェクトを配置し、シェーダを使ってオブジェクトの見え方を調整する。
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto my-content" id="MonoMemo">
+    <div class="row">
+        <div class="col-12"><a href="MonoMemo.html">MonoMemo</a></div>
+    </div>
+    <div class="row">
+        <div class="col-4"><img src="MonoMemo.PNG"></div>
+        <div class="col-8">
+            `MonoMemo`と言う自分で考えたアプリケーション。実世界のモノに紐づいてメモを残せるような仕組みにできたら面白いと思っている。今はまだ、実装途中。<br>
+            日常生活していて、ものを見た時に何か思い出すべきことがあるはずなのに思い出せない、と言う経験がこのアプリケーションによってなくせると考えている。<br>
+            現状、スマホARなので、スマホを常時覗いてないとこのアプリでは上の問題を解決できないが、のちにARグラスが浸透した時には、効果を発揮すると思われる。<br>
+            分類機モデルはAppleが提供しているものをそのまま使っているので、実用レベルの精度が出ない。しかし、改良していけば個々のモノ特定する精度が向上すると思われる。具体的には、ARAnchorで得られる特徴点の情報や深度カメラによる情報などが使えると考えられる。
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto my-content" id="EmotionDetection">
+    <div class="row">
+        <div class="col-12">顔画像からの感情検出</div>
+    </div>
+    <div class="row">
+        <div class="col-4"><img src="EmotionDetection.png"></div>
+        <div class="col-8">
+            卒業研究のために必要となるサンプルアプリケーションの一つとして開発。<br>
+            入力画像 -> OpenCVによる顔の部分の抽出 -> LBP特徴量 -> Random Forest分類機<br>
+            と言うような処理の流れで分類。<br>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto my-content" id="usdz">
     <div class="row">
         <div class="col-12"><a href="usdzSample.html">usdz sample</a></div>
     </div>
@@ -128,18 +148,16 @@
         <div class="col-4"><img src="usdzSample.jpeg"></div>
         <div class="col-8">
             ARオブジェクトを保存するファイルフォーマットとして`usdz`と言うものがある。<br>
-            現状、これをhtml内に配置し、スマートフォンのブラウザからアクセスすることで特別なアプリを必要とすることなくARでファイルに保存されたオブジェクトを表示することができる。<br>
-            これは、ECサイトなどで大いに普及すると考えられる。
+            これをhtml内に配置し、スマートフォンのブラウザからアクセスすることで特別なアプリを必要とすることなくARでファイルに保存されたオブジェクトを表示することができる。<br>
+            これは、のちにECサイトなどで大いに普及すると考えられる。<br>
+            ARオブジェクトは現実世界の重力方向の平面を認識し、床などに落ちる。このようにして、実際のもののサイズをARで体感することができる。
         </div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<!--フッター-->
-<footer class="footer d-flex align-items-center">
-    <div class="container">
-        Place sticky footer content here.
-    </div>
-</footer>
 </body>
 </html>
