@@ -1,5 +1,7 @@
 window.addEventListener("DOMContentLoaded", init);
 
+var controls;
+
 function init() {
     // const width = 960;
     // const height = 540;
@@ -33,8 +35,10 @@ function init() {
     );
     camera.position.set(0, 0, 0);
 
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    // controls = new THREE.OrbitControls(camera);
+    // controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls = new THREE.OrbitControls(camera);
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1;
   
     // // 箱を作成
     // const geometry = new THREE.BoxGeometry(500, 500, 500);
@@ -64,6 +68,7 @@ function init() {
         function (error) {
             console.log('An error happened');
             console.log(error);
+            console.log(error.message);
         }
     );
   
