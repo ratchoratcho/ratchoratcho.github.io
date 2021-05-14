@@ -3,16 +3,16 @@ window.addEventListener("DOMContentLoaded", init);
 var controls;
 
 function init() {
-    // const width = 960;
-    // const height = 540;
-    const width = document.getElementById('myCanvasRapper').getBoundingClientRect().width;
-    const height = document.getElementById('myCanvasRapper').getBoundingClientRect().height;
+    const width = 960;
+    const height = 540;
+    // const width = document.getElementById('myCanvasRapper').getBoundingClientRect().width;
+    // const height = document.getElementById('myCanvasRapper').getBoundingClientRect().height;
 
     // document.getElementById('myCanvas').getBoundingClientRect().width = width;
     // document.getElementById('myCanvas').getBoundingClientRect().height = height;
 
-    $('#myCanvas').attr('width', width);
-    $('#myCanvas').attr('height', height);
+    // $('#myCanvas').attr('width', width);
+    // $('#myCanvas').attr('height', height);
 
     // レンダラーを作成
     // レンダラーを作成
