@@ -14,7 +14,7 @@ function init() {
 
     // レンダラーを作成
     // レンダラーを作成
-    renderer = new THREE.WebGLRenderer({
+    const renderer = new THREE.WebGLRenderer({
       canvas: document.querySelector("#myCanvas")
     });
     // renderer.setPixelRatio(window.devicePixelRatio);
@@ -25,7 +25,7 @@ function init() {
     scene = new THREE.Scene();
   
     // カメラを作成
-    camera = new THREE.PerspectiveCamera(
+    const camera = new THREE.PerspectiveCamera(
       45,
       width / height,
       1,
@@ -33,7 +33,7 @@ function init() {
     );
     camera.position.set(0, 0, 0);
 
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
     // controls = new THREE.OrbitControls(camera);
   
     // // 箱を作成
