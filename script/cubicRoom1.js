@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 var controls;
 var renderer;
+var camera;
 
 function init() {
     const width = 960;
@@ -28,7 +29,7 @@ function init() {
     scene = new THREE.Scene();
   
     // カメラを作成
-    const camera = new THREE.PerspectiveCamera(
+    camera = new THREE.PerspectiveCamera(
       45,
       width / height,
       1,
