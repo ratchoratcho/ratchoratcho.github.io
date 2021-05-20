@@ -35,8 +35,8 @@ function init() {
     );
     camera.position.set(0, 0, 0);
 
-    // controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls = new THREE.OrbitControls(camera);
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    // controls = new THREE.OrbitControls(camera);
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1;
   
