@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", init);
 
 var controls;
+var renderer;
 
 function init() {
     const width = 960;
@@ -16,7 +17,7 @@ function init() {
 
     // レンダラーを作成
     // レンダラーを作成
-    const renderer = new THREE.WebGLRenderer({
+    renderer = new THREE.WebGLRenderer({
       canvas: document.querySelector("#myCanvas")
     });
     // renderer.setPixelRatio(window.devicePixelRatio);
