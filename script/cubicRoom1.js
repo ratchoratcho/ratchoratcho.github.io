@@ -35,44 +35,44 @@ function init() {
       1,
       10000
     );
-    camera.position.set(0, 0, 0);
+    camera.position.set(0, 0, 10);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     // controls = new THREE.OrbitControls(camera);
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1;
   
-    // // 箱を作成
-    // const geometry = new THREE.BoxGeometry(500, 500, 500);
-    // const material = new THREE.MeshStandardMaterial({
-    //   color: 0x0000ff
-    // });
-    // const box = new THREE.Mesh(geometry, material);
-    // scene.add(box);
+    // 箱を作成
+    const geometry = new THREE.BoxGeometry(500, 500, 500);
+    const material = new THREE.MeshStandardMaterial({
+      color: 0x0000ff
+    });
+    const box = new THREE.Mesh(geometry, material);
+    scene.add(box);
 
     // Load GLTF or GLB
-    const loader = new THREE.GLTFLoader();
-    const url = '../resource/models/CubicRoom1.glb';
+    // const loader = new THREE.GLTFLoader();
+    // const url = '../resource/models/CubicRoom1.glb';
     
 
-    let model = null;
-    loader.load(
-        url,
-        function (gltf) {
-            model = gltf.scene;
-            // model.name = "model_with_cloth";
-            // model.scale.set(400.0, 400.0, 400.0);
-            model.position.set(0, 0, 0);
-            scene.add(gltf.scene);
+    // let model = null;
+    // loader.load(
+    //     url,
+    //     function (gltf) {
+    //         model = gltf.scene;
+    //         // model.name = "model_with_cloth";
+    //         // model.scale.set(400.0, 400.0, 400.0);
+    //         model.position.set(0, 0, 0);
+    //         scene.add(gltf.scene);
 
-            // model["test"] = 100;
-        },
-        function (error) {
-            console.log('An error happened');
-            console.log(error);
-            console.log(error.message);
-        }
-    );
+    //         // model["test"] = 100;
+    //     },
+    //     function (error) {
+    //         console.log('An error happened');
+    //         console.log(error);
+    //         console.log(error.message);
+    //     }
+    // );
   
     // 平行光源
     const directionalLight = new THREE.DirectionalLight(
