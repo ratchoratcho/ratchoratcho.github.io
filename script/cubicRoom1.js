@@ -51,28 +51,28 @@ function init() {
     scene.add(box);
 
     // Load GLTF or GLB
-    // const loader = new THREE.GLTFLoader();
-    // const url = '../resource/models/CubicRoom1.glb';
+    const loader = new THREE.GLTFLoader();
+    const url = '../resource/models/CubicRoom1.glb';
     
 
-    // let model = null;
-    // loader.load(
-    //     url,
-    //     function (gltf) {
-    //         model = gltf.scene;
-    //         // model.name = "model_with_cloth";
-    //         // model.scale.set(400.0, 400.0, 400.0);
-    //         model.position.set(0, 0, 0);
-    //         scene.add(gltf.scene);
+    let model = null;
+    loader.load(
+        url,
+        function (gltf) {
+            model = gltf.scene;
+            // model.name = "model_with_cloth";
+            // model.scale.set(400.0, 400.0, 400.0);
+            model.position.set(0, 0, 0);
+            scene.add(gltf.scene);
 
-    //         // model["test"] = 100;
-    //     },
-    //     function (error) {
-    //         console.log('An error happened');
-    //         console.log(error);
-    //         console.log(error.message);
-    //     }
-    // );
+            // model["test"] = 100;
+        },
+        function (error) {
+            console.log('An error happened');
+            console.log(error);
+            console.log(error.message);
+        }
+    );
   
     // 平行光源
     const directionalLight = new THREE.DirectionalLight(
