@@ -35,7 +35,7 @@ function init() {
       1,
       10000
     );
-    camera.position.set(0, 0, 10);
+    camera.position.set(0, 0, 100);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     // controls = new THREE.OrbitControls(camera);
@@ -43,7 +43,7 @@ function init() {
     controls.autoRotateSpeed = 1;
   
     // 箱を作成
-    const geometry = new THREE.BoxGeometry(500, 500, 500);
+    const geometry = new THREE.BoxGeometry(12, 12, 12);
     const material = new THREE.MeshStandardMaterial({
       color: 0x0000ff
     });
