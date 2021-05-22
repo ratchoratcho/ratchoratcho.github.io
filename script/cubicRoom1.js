@@ -5,6 +5,8 @@ var renderer;
 var camera;
 
 function init() {
+    // const polyfill = new WebVRPolyfill();
+
     const width = 960;
     const height = 540;
     // const width = document.getElementById('myCanvasRapper').getBoundingClientRect().width;
@@ -24,6 +26,13 @@ function init() {
     // renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setPixelRatio(1);
     renderer.setSize(width, height);
+    renderer.xr.enabled = true;
+
+    const container = document.getElementById('myCanvasRapper');
+    // container.style.position = "relative";
+    // container.style.width = width;
+    // container.style.height = height;
+    container.appendChild(VRButton.createButton( renderer ));
   
     // シーンを作成
     scene = new THREE.Scene();
@@ -83,11 +92,12 @@ function init() {
     scene.add(directionalLight);
   
     // 初回実行
-    tick();
+    // tick();
+    renderer.setAnimationLoop(tick);
 }
 
 function tick() {
-    controls.update();
+    // controls.update();
     renderer.render(scene, camera);
-    requestAnimationFrame(tick);
+    // requestAnimationFrame(tick);
 }
